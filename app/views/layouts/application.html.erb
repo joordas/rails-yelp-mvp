@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <header>
+      <h1><%= link_to "JELP", root_path %></h1>
+      <%= link_to "CREATE A RESTAURANT", new_restaurant_path %>
+      <%= link_to 'Back', root_path %>
+    </header>
     <%= yield %>
   </body>
 </html>

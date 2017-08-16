@@ -3,5 +3,6 @@
     <div class="restaurant-card">
       <h2><%= link_to restaurant.name , restaurant_path(restaurant) %>
     </div></h2>
+    <%= link_to "destroy this one", restaurant_path(restaurant), method: :delete %>
   <% end  %>
 </div>

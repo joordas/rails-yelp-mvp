@@ -11,9 +11,11 @@
   <body>
     <header>
       <h1><%= link_to "JELP", root_path %></h1>
-      <%= link_to "CREATE A RESTAURANT", new_restaurant_path %>
+      <%= link_to "CREATE A RESTAURANT", new_restaurant_path, class: 'new-restaurant' %>
       <%= link_to 'Back', root_path %>
     </header>
-    <%= yield %>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :find_restaurant, only: [ :show]
+  before_action :find_restaurant, only: [ :show, :destroy]
   def index
     @restaurants = Restaurant.all
   end
@@ -20,6 +20,11 @@ class RestaurantsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.destroy
   end
 
   private
